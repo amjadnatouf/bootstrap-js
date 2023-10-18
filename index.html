@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar and Slider Example</title>
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <img
+          class="navbar-brand"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6MyXFWfkzS1W9hBy0Mb9cdftOvdwkuVXaNJWdaB16LeLmfpivPGD8z93RwerC_ZJRJg&usqp=CAU"
+          alt="Logo"
+          width="50"
+          height="40"
+        />
+        <a class="navbar-brand" href="#"><h2 class="mb-0">Novo</h2></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Destination</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Package
+              </a>
+              <ul class="dropdown-menu bg-light rounded-1 mt-2 py-3">
+                <li><a class="dropdown-item" href="#">Vacation</a></li>
+                <li><a class="dropdown-item" href="#">Special</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Weekend</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+            <button
+              class="btn btn-outline-primary my-2 mx-2 my-sm-0"
+              type="button"
+              data-toggle="modal"
+              data-target="#loginModal"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="slider" class="carousel fade-carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#slider" data-slide-to="0" class="active"></li>
+        <li data-target="#slider" data-slide-to="1"></li>
+        <li data-target="#slider" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="overlay-container slide-1">
+            <div class="overlay"></div>
+          </div>
+          <div class="hero">
+            <h2>We are creative</h2>
+            <button
+              class="btn btn-danger btn-orange btn-lg text-light"
+              role="button"
+            >
+              See all features
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="overlay-container slide-2">
+            <div class="overlay"></div>
+          </div>
+          <div class="hero">
+            <h2>We are smart</h2>
+            <button
+              class="btn btn-danger btn-orange btn-lg text-light"
+              role="button"
+            >
+              See all features
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="overlay-container slide-3">
+            <div class="overlay"></div>
+          </div>
+          <div class="hero">
+            <h2>We are amazing</h2>
+            <button
+              class="btn btn-danger btn-orange btn-lg text-light"
+              role="button"
+            >
+              See all features
+            </button>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#slider"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#slider"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="mb-3">
+                <div class="form-check p-0 d-flex align-items-center">
+                  <label class="switch mr-2">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <span class="mt-0"> Remember me </span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Icons -->
+    <div class="fixed-bottom sidebar">
+      <a href="#" class="social-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="social-icon text-success">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fab fa-instagram" id="insta"></i>
+      </a>
+      <a href="#" class="social-icon text-yellow">
+        <i class="fab fa-snapchat"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+
+    <section id="about">
+      <div class="container mt-5">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>About Us</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4 rounded">
+            <img
+              src="https://images.unsplash.com/photo-1694954075938-ce66449dc9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Company Image"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-lg-6 my-auto">
+            <h2>Connect with a Travel Consultant</h2>
+            <p>
+              We’re here to make your next vacation the best vacation. And part
+              of that starts before you even get on a plane. It’s all about
+              building relationships and creating one-on-one experiences with
+              our dedicated consultants.
+            </p>
+            <p>
+              Whether you’re meeting in one of our stores or connecting
+              remotely, these travel consultants can help you with every detail
+              when it comes to planning your getaway. Ready to get started?
+            </p>
+            <button class="btn btn-danger btn-orange">Find an Expert</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="special">
+      <div class="section-title aos-init aos-animate" data-aos="fade-up">
+        <h2>Islands</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <h2 class="mb-4"></h2>
+      <div
+        class="panel-group"
+        id="accordion"
+        role="tablist"
+        aria-multiselectable="true"
+      >
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a
+                class="first"
+                role="button"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Maldives
+                <span> </span>
+              </a>
+            </h4>
+          </div>
+          <div
+            id="collapseOne"
+            class="panel-collapse collapse in"
+            role="tabpanel"
+            aria-labelledby="headingOne"
+          >
+            <div class="panel-body">
+              <p>
+                The Maldives is a tropical paradise known for its stunning white
+                sandy beaches, crystal-clear turquoise waters, and vibrant coral
+                reefs. It's a popular destination for honeymooners and water
+                sports enthusiasts, offering a unique and luxurious experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a
+                class="collapsed"
+                role="button"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Canary Islands
+                <span> </span>
+              </a>
+            </h4>
+          </div>
+          <div
+            id="collapseTwo"
+            class="panel-collapse collapse"
+            role="tabpanel"
+            aria-labelledby="headingTwo"
+          >
+            <div class="panel-body">
+              <p>
+                The Canary Islands, located off the northwest coast of Africa,
+                are known for their diverse landscapes, including volcanic
+                craters, sandy beaches, and lush forests. These islands offer a
+                perfect blend of natural beauty, adventure, and relaxation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a
+                class="collapsed last"
+                role="button"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Hawaii
+                <span> </span>
+              </a>
+            </h4>
+          </div>
+          <div
+            id="collapseThree"
+            class="panel-collapse collapse"
+            role="tabpanel"
+            aria-labelledby="headingThree"
+          >
+            <div class="panel-body">
+              <p>
+                Hawaii is an archipelago in the Pacific Ocean known for its
+                breathtaking landscapes, including volcanoes, tropical forests,
+                and stunning beaches. It offers a rich cultural experience and a
+                wide range of outdoor activities for visitors to enjoy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <div class="container">
+        <div class="row aos-init aos-animate" data-aos="zoom-out">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Welcome to Adventure Travels</h3>
+            <p>
+              Explore the world with Adventure Travels - your gateway to
+              unforgettable journeys and thrilling adventures. Immerse yourself
+              in diverse cultures, breathtaking landscapes, and exciting
+              activities that will create lasting memories.
+            </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <button
+              id="liveAlertBtn"
+              class="btn cta-btn"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Copy to Clipboard"
+            >
+              Copy Text
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats-counter" class="stats-counter">
+      <div class="container aos-init aos-animate" data-aos="zoom-out">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span
+                data-purecounter-start="0"
+                data-purecounter-end="232"
+                data-purecounter-duration="0"
+                class="purecounter"
+                >232</span
+              >
+              <p>Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center">
+              <span
+                data-purecounter-start="0"
+                data-purecounter-end="521"
+                data-purecounter-duration="0"
+                class="purecounter"
+                >521</span
+              >
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span
+                data-purecounter-start="0"
+                data-purecounter-end="1453"
+                data-purecounter-duration="0"
+                class="purecounter"
+                >1453</span
+              >
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span
+                data-purecounter-start="0"
+                data-purecounter-end="32"
+                data-purecounter-duration="0"
+                class="purecounter"
+                >32</span
+              >
+              <p>Workers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Our Services</h2>
+          <p>Discover amazing travel experiences with us.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="#">Worldwide Destinations</a></h4>
+              <p class="description">
+                Explore various destinations across the globe and make
+                unforgettable memories.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Air Travel Assistance</a></h4>
+              <p class="description">
+                Let us help you with your flight bookings and travel
+                arrangements for a seamless journey.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Accommodation Choices</a></h4>
+              <p class="description">
+                Choose from a wide range of accommodation options that suit your
+                preferences and budget.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Photography Tours</a></h4>
+              <p class="description">
+                Capture breathtaking moments on specialized photography tours
+                designed for enthusiasts.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Travel Destinations</a></h4>
+              <p class="description">
+                Explore exciting travel destinations around the world with our
+                expert travel guides.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Accommodation Choices</a></h4>
+              <p class="description">
+                Choose from a wide range of accommodation options that suit your
+                preferences and budget.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Flight Booking</a></h4>
+              <p class="description">
+                Choose from a wide range of accommodation options that suit your
+                preferences and budget.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 card-service"
+          >
+            <div
+              class="icon-box aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fa-brands fa-readme"></i></div>
+              <h4 class="title"><a href="">Travel Packages</a></h4>
+              <p class="description">
+                Explore curated travel packages tailored to your interests and
+                preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsor" class="stats-counter">
+      <div class="container aos-init aos-animate" data-aos="zoom-out">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span class="sponsor-icon"
+                ><i class="fas fa-mobile-alt"></i
+              ></span>
+              <span class="purecounter sponsor-item">MyMob</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center">
+              <span class="sponsor-icon"
+                ><i class="fas fa-university"></i
+              ></span>
+              <span class="purecounter sponsor-item">Trustly</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span class="sponsor-icon"><i class="fas fa-users"></i></span>
+              <span class="purecounter sponsor-item">Belimo</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span class="sponsor-icon"><i class="fas fa-cogs"></i></span>
+              <span class="sponsor-item purecounter">LifeGroups</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Our Team</h2>
+          <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+            aliquid fuga eum quidem.
+          </p>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-6 aos-init aos-animate"
+            data-aos="fade-up"
+          >
+            <div class="member">
+              <div class="pic overlay-container">
+                <img
+                  src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2787"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="overlay"></div>
+              </div>
+              <div class="member-info">
+                <div
+                  class="member-content px-3 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2787"
+                    alt=""
+                    width="60"
+                    height="100"
+                    class="rounded-circle"
+                  />
+                  <div class="mx-3">
+                    <h4>Walter White</h4>
+                    <span>Chief Executive Officer</span>
+                    <div class="social">
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="member">
+              <div class="pic overlay-container">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1669879825881-6d4e4bde67d5?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2848"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="overlay"></div>
+              </div>
+              <div class="member-info">
+                <div
+                  class="member-content px-3 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1669879825881-6d4e4bde67d5?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2848"
+                    alt=""
+                    width="60"
+                    height="100"
+                    class="rounded-circle"
+                  />
+                  <div class="mx-3">
+                    <h4>Sarah Jhonson</h4>
+                    <span>Product Manager</span>
+                    <div class="social">
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="member">
+              <div class="pic overlay-container">
+                <img
+                  src="https://images.unsplash.com/photo-1626038135427-bd4eb8193ba5?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2787"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="overlay"></div>
+              </div>
+              <div class="member-info">
+                <div
+                  class="member-content px-3 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1626038135427-bd4eb8193ba5?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2787"
+                    alt=""
+                    width="60"
+                    height="100"
+                    class="rounded-circle"
+                  />
+                  <div class="mx-3">
+                    <h4>William Anderson</h4>
+                    <span>CTO</span>
+                    <div class="social">
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog">
+      <div class="container py-4 aos-init aos-animate" data-aos="fade-up">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Hotels</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+
+        <article class="postcard dark blue">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/1000/1000"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h2 class="postcard__title blue">
+              <a href="#">The Westin Palace Madrid</a>
+            </h2>
+            <div class="postcard__subtitle small">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, Oct 15th 2013
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              The Westin Palace Madrid is an opulent luxury hotel situated in
+              the heart of Madrid, Spain. Renowned for its regal architecture
+              and exceptional service, the hotel offers a haven of elegance and
+              comfort. With its lavish rooms, fine dining restaurants, and an
+              array of world-class amenities, guests are treated to a truly
+              indulgent experience in this historical and prestigious
+              establishment.
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Reviews</li>
+              <li class="tag__item">
+                <i class="fas fa-clock mr-2"></i>15 mins.
+              </li>
+              <li class="tag__item play blue">
+                <a href="#"><i class="fas fa-play mr-2"></i>Show Preview</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard dark red">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/501/500"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h2 class="postcard__title red">
+              <a href="#">Hotel Arts Barcelon</a>
+            </h2>
+            <div class="postcard__subtitle small">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Tes, Jan 01st 2017
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Hotel Arts Barcelona is a modern architectural masterpiece that
+              graces the skyline of the vibrant city of Barcelona. Nestled on
+              the shores of the Mediterranean Sea, this luxury hotel boasts
+              contemporary design and unparalleled views. From its upscale rooms
+              and suites to its Michelin-starred dining, Hotel Arts provides a
+              luxurious retreat for discerning travelers seeking sophistication
+              and style.
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Reviews</li>
+              <li class="tag__item">
+                <i class="fas fa-clock mr-2"></i>10 mins.
+              </li>
+              <li class="tag__item play red">
+                <a href="#"><i class="fas fa-play mr-2"></i>Show Preview</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard dark green">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/500/501"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h2 class="postcard__title green">
+              <a href="#">Gran Hotel de Resort</a>
+            </h2>
+            <div class="postcard__subtitle small">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Wed, Feb 02nd 2011
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Gran Hotel Bahía del Duque Resort is a paradisiacal oasis located
+              in Costa Adeje, Tenerife. Set amidst lush gardens and overlooking
+              the Atlantic Ocean, this luxury resort combines Canarian-inspired
+              architecture with world-class amenities. Guests can enjoy the
+              pristine beaches, exquisite dining options, rejuvenating spa
+              treatments, and a range of outdoor activities, all in an
+              environment of utmost luxury and relaxation.
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Reviews</li>
+              <li class="tag__item">
+                <i class="fas fa-clock mr-2"></i>5 mins.
+              </li>
+              <li class="tag__item play green">
+                <a href="#"><i class="fas fa-play mr-2"></i>Show Preview</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard dark yellow">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/501/501"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h2 class="postcard__title yellow">
+              <a href="#">Hotel Maria Cristina</a>
+            </h2>
+            <div class="postcard__subtitle small">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Fri, Mar 02nd 2011
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Hotel Maria Cristina is an iconic luxury hotel located in the
+              picturesque city of San Sebastian. Elegantly blending Belle Époque
+              charm with contemporary sophistication, the hotel offers a refined
+              experience. Guests can relish in the impeccably designed rooms,
+              savor gourmet cuisine, and experience unparalleled service in an
+              enchanting ambiance that reflects the rich history and culture of
+              the Basque Country.
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Reviews</li>
+              <li class="tag__item">
+                <i class="fas fa-clock mr-2"></i>20 mins.
+              </li>
+              <li class="tag__item play yellow">
+                <a href="#"><i class="fas fa-play mr-2"></i>Show Preview</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="container">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Join Us</h2>
+          <p>We would be happy to have you in our company!</p>
+        </div>
+        <div class="d-flex flex-wrap follow-us">
+          <div class="join-link text-center">
+            <a href="#" class="bg-dark mb-3 text-primary facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <button class="btn btn-join-1 btn-sm">Join on Facebook</button>
+          </div>
+
+          <div class="join-link text-center">
+            <a href="#" class="bg-dark mb-3 text-success whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <button class="btn btn-join-2 btn-sm">Join on WhatsApp</button>
+          </div>
+
+          <div class="join-link text-center">
+            <a href="#" class="bg-dark mb-3 instagram">
+              <i class="fa fa-instagram" id="insta" aria-hidden="true"></i>
+            </a>
+            <button class="btn btn-join-3 btn-sm">Follow on Instagram</button>
+          </div>
+
+          <div class="join-link text-center">
+            <a href="#" class="bg-dark mb-3 text-primary twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <button class="btn btn-join-4 btn-sm">Follow on Twitter</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-content pt-5 flex-wrap">
+        <div class="footer-links">
+          <div class="footer-header mb-3">
+            <img
+              src="https://assets-global.website-files.com/6058ba87eec5713e5f80752a/62ba3958b201c1a464247694_BEC-Core-Values.png"
+              width="60"
+              height="60"
+              alt=""
+              class="rounded-circle"
+            />
+            <h4 class="m-0">About Us</h4>
+          </div>
+          <ul class="text-center">
+            <li class="mb-3"><a href="#">About Our Travel Agency</a></li>
+            <li class="mb-3"><a href="#">Our Team</a></li>
+            <li class="mb-3"><a href="#">Special Offers</a></li>
+            <li class="mb-3"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-header mb-3">
+            <img
+              src="https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2864"
+              width="60"
+              height="60"
+              alt=""
+              class="rounded-circle"
+            />
+            <h4 class="m-0">Our Services</h4>
+          </div>
+          <ul class="text-center">
+            <li class="mb-3"><a href="#">Vacation Packages</a></li>
+            <li class="mb-3"><a href="#">Hotel Reservations</a></li>
+            <li class="mb-3"><a href="#">Flight Booking</a></li>
+            <li class="mb-3"><a href="#">Travel Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-header mb-3">
+            <img
+              src="https://daqiantimes.com/wp-content/uploads/2019/07/customers-people-network-ss-1920_vfnk0v-1024x576.jpg"
+              width="60"
+              height="60"
+              alt=""
+              class="rounded-circle"
+            />
+            <h4 class="m-0">Contact Us</h4>
+          </div>
+          <div class="text-center">
+            <p>Wall Street 123</p>
+            <p>1234 Cairo, Eygpt</p>
+            <p class="mt-4">
+              <strong>Phone:</strong> <span>+1 123 456 7890</span>
+            </p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>© <span>2023 Travel Agency, All Rights Reserved</span></p>
+        <div class="credits">
+          Designed by <a href="#" class="text-dark">Your Name</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
